@@ -1,0 +1,154 @@
+// ---------- Theme Colors ----------
+$primary: #5b21b6;      // rich purple
+$secondary: #06b6d4;    // cyan accent
+$light-bg: #f4f4f9;
+$text-dark: #1f2937;
+$text-light: #fff;
+$error: #e11d48;
+
+// ---------- Base ----------
+.page-contact {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: $light-bg;
+  border-radius: 1rem;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $text-dark;
+
+  .page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+}
+
+// ---------- Form ----------
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  input,
+  textarea {
+    padding: 0.9rem 1rem;
+    border: 2px solid lighten($primary, 20%);
+    border-radius: 0.5rem;
+    background: #fff;
+    font-size: 1rem;
+    transition: all 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $secondary;
+      box-shadow: 0 0 0 3px rgba($secondary, 0.3);
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .btn-submit {
+    background: linear-gradient(90deg, $primary, $secondary);
+    border: none;
+    color: $text-light;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// ---------- Status Message ----------
+.status-msg {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: $primary;
+}
+
+// ---------- Table ----------
+.list-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: darken($primary, 5%);
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #fff;
+
+  thead {
+    background: $primary;
+    color: $text-light;
+
+    th {
+      padding: 0.75rem;
+      text-align: left;
+      font-weight: 600;
+    }
+  }
+
+  tbody {
+    td {
+      padding: 0.75rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    .no-data {
+      text-align: center;
+      padding: 2rem;
+      font-style: italic;
+      color: #6b7280;
+    }
+  }
+
+  // Action buttons
+  .btn-edit,
+  .btn-delete {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    color: $text-light;
+    transition: background 0.2s;
+  }
+
+  .btn-edit {
+    background: $secondary;
+
+    &:hover {
+      background: darken($secondary, 10%);
+    }
+  }
+
+  .btn-delete {
+    background: $error;
+
+    &:hover {
+      background: darken($error, 10%);
+    }
+  }
+}

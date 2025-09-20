@@ -1,0 +1,31 @@
+.navbar {
+  background: #00ff51;          /* deep black background */
+  color: #00fbff;               /* default text color: yellow */
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #f4d03f;             /* logo text in yellow */
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    li {
+      cursor: pointer;
+      color: #f4d03f;           /* nav links yellow */
+      transition: 0.3s;
+
+      &:hover {
+        text-decoration: underline;
+        color: #c8a900;         /* darker yellow on hover */
+      }
+    }
+  }
+}
